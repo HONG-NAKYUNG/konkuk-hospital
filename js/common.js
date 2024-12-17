@@ -64,4 +64,13 @@ $(function () {
     $("#tabwrap section").eq(index).css("display", "block");
     return false;
   });
+
+  $(".nav > ul > li > a").mouseover(function () {
+    $(".nav .submenu").stop().fadeIn(800);
+    $("header").addClass("active");
+  });
+  $(".nav > ul > li > a").mouseout(function () {
+    $(".nav .submenu").stop().fadeOut(800);
+    $("header").removeClass("active");
+  });
 });

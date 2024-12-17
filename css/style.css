@@ -61,6 +61,7 @@ a {
   border-bottom: 1px solid #ddd;
   background-color: #fff;
 }
+
 /* header 안 맨 위 버튼 부분 (top-left / right) */
 #header .top-left {
   left: 0;
@@ -195,7 +196,7 @@ header .inner {
   padding: 10px;
 }
 /* gnb .submenu */
-/* #gnb .submenu {
+#gnb .submenu {
   position: absolute;
   top: 81px;
   height: 508px;
@@ -275,10 +276,11 @@ header .inner {
 
 #gnb ul.mainmenu > li.active .submenu {
   display: block;
+  border-bottom: 2px solid #12b8ba;
 }
 #gnb ul.mainmenu > li .submenu {
   display: none;
-} */
+}
 .submenu01 {
   position: relative;
   width: 1280px;
