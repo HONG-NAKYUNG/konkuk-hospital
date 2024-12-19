@@ -200,8 +200,8 @@ header .inner {
   display: inline-block;
   padding: 10px;
 }
-/* gnb .submenu */
 
+/* 
 #gnb .submenu .inner .list {
   float: left;
   position: relative;
@@ -260,7 +260,7 @@ header .inner {
 }
 #gnb ul.mainmenu > li .submenu {
   display: none;
-}
+} */
 
 /* gnb 안 submenu 디자인 */
 .submenu-wrap .inner {
@@ -279,45 +279,91 @@ header .inner {
   font-weight: 700;
   width: 250px;
   box-sizing: border-box;
-  border-right: 1px solid #929292;
 }
 
 .submenu-wrap .inner .submenu .des {
   float: left;
   width: calc(100% - 250px);
+  box-sizing: border-box;
+  border-left: 1px solid #e4e4e4;
+  line-height: 2.7;
 }
 
-.submenu-wrap .inner .submenu .des > ul > li {
+.submenu-wrap .inner .submenu .des ul li {
   margin-left: 20px;
 }
-.submenu-wrap .inner .submenu .des > ul > li > a {
+.submenu-wrap .inner .submenu .des ul li a {
   color: #222;
   font-size: 18px;
   font-weight: 600;
 }
-/* .submenu-wrap .inner .submenu .des > ul:before {
-  content: "";
+/* 진료 안내 서브메뉴 */
+.submenu-wrap .inner .submenu.sec .des > ul > li {
+  float: left;
+  position: relative;
+  line-height: 2.7;
+  width: 20%;
+}
+.submenu-wrap .inner .submenu.sec .des > ul > li::before {
+  content: '';
   position: absolute;
-  top: 40px;
-  left: 250px;
-  width: 1px;
-  height: 70px;
-  background-color: #929292;
-} */
+  top: 20px;
+  left: -15px;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: #71d4d6;
+}
+.submenu-wrap .inner .submenu.sec .des > ul > li > a {
+  color: rgb(136, 136, 136);
+  font-size: 16px;
+  font-weight: 400;
+}
+.submenu-wrap .inner .submenu h3 {
+  float: left;
+  color: #12b8ba;
+  font-size: 32px;
+  font-weight: 700;
+  width: 150px;
+  box-sizing: border-box;
+}
+.submenu-wrap .inner .submenu.sec .des {
+  float: left;
+  width: calc(100% - 150px);
+  box-sizing: border-box;
+  border-left: 1px solid #e4e4e4;
+  line-height: 2.7;
+}
+.submenu-wrap .inner .submenu.sec .des .submenu-cont {
+  height: 342px;
+  float: right;
+  position: relative;
+  width: 209px;
+  border-left: 1px solid #e4e4e4;
+}
 
-
-
-#header .submenu01 .inner > ul {
+/* 진료안내 오른쪽 서브메뉴 or 이용안내 서브메뉴 */
+.submenu-wrap .inner .submenu .des .submenu-cont {
+  height: 342px;
   float: left;
   position: relative;
   width: 209px;
-  height: 96px;
-  margin-top: 45px;
+  border-left: 1px solid #e4e4e4;
 }
-#header .submenu01 ul li {
+.submenu-wrap .inner .submenu .des .submenu-cont > ul {
   margin-left: 20px;
 }
-
+.submenu-wrap .inner .submenu .des .submenu-cont ul > li{
+  margin-left: 0;
+}
+.submenu-wrap .inner .submenu .des .submenu-cont > ul > li > ul > li {
+margin-top: -10px;
+}
+.submenu-wrap .inner .submenu .des .submenu-cont > ul > li > ul > li > a{
+  color: #888;
+  font-size: 15px;
+  font-weight: 400;
+}
 
 /* #slider */
 #slider {
