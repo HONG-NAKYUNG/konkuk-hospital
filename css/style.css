@@ -53,14 +53,19 @@ a {
 
 /* #header */
 #header {
-  position: relative;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 121px;
   border-bottom: 1px solid #ddd;
   background-color: #fff;
+  transition: 0.3s;
 }
+
+/* #header.active {
+  border-bottom: 1px solid #12b8ba;
+} */
 
 /* header 안 맨 위 버튼 부분 (top-left / right) */
 #header .top-left {
@@ -196,32 +201,7 @@ header .inner {
   padding: 10px;
 }
 /* gnb .submenu */
-#gnb .submenu {
-  position: absolute;
-  top: 81px;
-  height: 508px;
-  left: 0;
-  z-index: 100;
-  width: 100%;
-  background-color: #fff;
-}
-#gnb .submenu .inner {
-  position: relative;
-  width: auto;
-  height: 96px;
-  padding: 0 10px 0 233px;
-  text-align: left;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-#gnb .submenu .inner .menuName {
-  position: absolute;
-  top: 41px;
-  left: 0;
-  color: #12b8ba;
-  font-size: 32px;
-  font-weight: 700;
-}
+
 #gnb .submenu .inner .list {
   float: left;
   position: relative;
@@ -281,33 +261,51 @@ header .inner {
 #gnb ul.mainmenu > li .submenu {
   display: none;
 }
-.submenu01 {
-  position: relative;
-  width: 1280px;
-  height: 96px;
-  left: 300px;
-  top: 0px;
-  background-color: #fff;
-  border-bottom: 2px solid #12b8ba;
-  display: none;
-}
-#header .submenu01 .inner {
-  position: relative;
-  width: auto;
-  height: 96px;
-  padding: 0 10px 0 233px;
-  text-align: left;
+
+/* gnb 안 submenu 디자인 */
+.submenu-wrap .inner {
+  width: 1300px;
   margin: 0 auto;
-  box-sizing: border-box;
 }
-#header .submenu01 .inner h3 {
-  position: absolute;
-  top: 41px;
-  left: 0;
+
+.submenu-wrap .inner .submenu {
+  display: none;
+  overflow: hidden;
+}
+.submenu-wrap .inner .submenu h3 {
+  float: left;
   color: #12b8ba;
   font-size: 32px;
   font-weight: 700;
+  width: 250px;
+  box-sizing: border-box;
+  border-right: 1px solid #929292;
 }
+
+.submenu-wrap .inner .submenu .des {
+  float: left;
+  width: calc(100% - 250px);
+}
+
+.submenu-wrap .inner .submenu .des > ul > li {
+  margin-left: 20px;
+}
+.submenu-wrap .inner .submenu .des > ul > li > a {
+  color: #222;
+  font-size: 18px;
+  font-weight: 600;
+}
+/* .submenu-wrap .inner .submenu .des > ul:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  left: 250px;
+  width: 1px;
+  height: 70px;
+  background-color: #929292;
+} */
+
+
 
 #header .submenu01 .inner > ul {
   float: left;
@@ -319,20 +317,7 @@ header .inner {
 #header .submenu01 ul li {
   margin-left: 20px;
 }
-#header .submenu01 ul li > a {
-  color: #222;
-  font-size: 18px;
-  font-weight: 600;
-}
-#header .submenu01 ul li:before {
-  content: "";
-  position: absolute;
-  top: -15px;
-  bottom: 43px;
-  left: 0;
-  width: 1px;
-  background-color: #ddd;
-}
+
 
 /* #slider */
 #slider {
@@ -340,6 +325,17 @@ header .inner {
   height: 720px;
   margin: 0 auto;
   background-color: wheat;
+}
+
+.mainvideo{
+  width: 1300px;
+  height: 500px;
+}
+
+.mainvideo video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
 }
 
 /* #slider .sub-menu */

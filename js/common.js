@@ -65,12 +65,21 @@ $(function () {
     return false;
   });
 
-  $(".nav > ul > li > a").mouseover(function () {
-    $(".nav .submenu").stop().fadeIn(800);
-    $("header").addClass("active");
+  // gnb 드롭다운
+  var thisIndex = 0;
+  $("nav > ul > li").mouseenter(function () {
+    thisIndex = $(this).index();
+    var headerHeight = $('.submenu-wrap .inner .submenu').eq(thisIndex).data('height');
+    $('.submenu-wrap .inner .submenu').eq(thisIndex).css('display','block');
+    $("#header").css("height",headerHeight);
   });
-  $(".nav > ul > li > a").mouseout(function () {
-    $(".nav .submenu").stop().fadeOut(800);
-    $("header").removeClass("active");
-  });
+
+  // $("nav > ul > li").mouseleave(function () {
+  //   $('.submenu-wrap .inner .submenu').eq(thisIndex).css('display','none');
+  // });
+
+  // $(".submenu-wrap").mouseleave(function () {
+  //   $('.submenu-wrap .inner .submenu').eq(thisIndex).css('display','none');
+  //   $("#header").css("height",'121px');
+  // });
 });
